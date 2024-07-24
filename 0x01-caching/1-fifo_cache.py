@@ -9,8 +9,8 @@ from base_caching import BaseCaching
 
 
 class FIFOCache(BaseCaching):
-    '''this is a class FIFOCache
-       `and is a caching system.
+    '''this is a class FIFOCache that gets from
+       BaseCaching which is a caching system.
     '''
 
     def __init__(self):
@@ -18,8 +18,8 @@ class FIFOCache(BaseCaching):
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
-        '''this assign to the dictionary
-           and value for the key key
+        '''this assign to the dictionary self.cache_data the
+           value for the key
         '''
 
         if key is None or item is None:
@@ -32,6 +32,6 @@ class FIFOCache(BaseCaching):
         self.cache_data[key] = item
 
     def get(self, key):
-        '''this return the value in cached to the key
+        '''this return the value in self.cache_data linked to the key
         '''
         return self.cache_data.get(key, None)
